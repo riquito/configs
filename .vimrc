@@ -140,6 +140,11 @@ let g:miniBufExplMapWindowNavArrows = 1
 
 set hidden
 
+" highlight current line
+set cursorline
+hi cursorline guibg=#333333 " highlight bg color of current line
+hi CursorColumn guibg=#333333 " highlight cursor
+
 " persistent undo
 set undofile               " Save undo's after file closes
 set undodir=~/.vim/undo " where to save undo histories
