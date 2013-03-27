@@ -120,7 +120,7 @@ set mouse=a
 
 " CtrlP customizations
 nmap <leader>b :CtrlPBuffer " show the buffer list<CR>
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*py,*~,*pyo,*/cache/*,*/vendor/*,*/uploads/*,*/adimg/*,*/apimg/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*~,*pyc,*pyo,*/cache/*,*/vendor/*,*/uploads/*,*/adimg/*,*/apimg/*
 
 " autocompletion in ex mode should stop at the shortest prefix
 set wildmode=longest,list,full
