@@ -129,8 +129,8 @@ set wildmenu
 " use django syntax highlighting for twig files
 au BufNewfile,BufRead *.twig set syntax=django
 
-" toggle fullscreen of the current buffer
-nnoremap <F11> :ZoomWin<CR>
+" Note: to toggle fullscreen of the current buffer
+" the standard keys are C-F (full), C-V (vertical only), C-H (horizontal only)
 
 "Show the miniBufExplorer from the start
 let g:miniBufExplorerMoreThanOne = 0
@@ -138,6 +138,7 @@ let g:miniBufExplorerMoreThanOne = 0
 "Still haven't discovered what it does
 let g:miniBufExplMapWindowNavArrows = 1
 
+" Let me swap between buffers without being asked to save first
 set hidden
 
 " highlight current line
@@ -147,20 +148,22 @@ hi CursorColumn guibg=#333333 " highlight cursor
 
 " persistent undo
 set undofile               " Save undo's after file closes
-set undodir=~/.vim/undo " where to save undo histories
-set undolevels=1000         " How many undos
-set undoreload=10000        " number of lines to save for undo
+set undodir=~/.vim/undo    " where to save undo histories (dir must exist)
+set undolevels=1000        " How many undos
+set undoreload=10000       " number of lines to save for undo
 
 " gundu keyboard mappings
-nnoremap <leader>u :GundoToggle<Cr>
+nnoremap <leader>u :GundoToggle<CR>
 
 " indentation settings
-set expandtab           " enter spaces when tab is pressed
-set textwidth=120       " break lines when line length increases
-set tabstop=4           " use 4 spaces to represent tab
-set softtabstop=4
-set shiftwidth=4        " number of spaces to use for auto indent
-set autoindent          " copy indent from current line when starting a new line
+set expandtab      " enter spaces when tab is pressed
+set tabstop=4      " an indentation every four columns
+set softtabstop=4  " let backspace delete indent
+set shiftwidth=4   " number of spaces to use for auto indent
+set autoindent     " indent at the same level of the previous line
+
+set nowrap             " wrap long lines
+set pastetoggle=<F12>  " pastetoggle (sane indentation on pastes)
 
 " make backspaces more powerfull
 " set backspace=indent,eol,start
@@ -170,5 +173,5 @@ set autoindent          " copy indent from current line when starting a new line
 " http://cygwin.com/ml/cygwin-xfree/2006-07/msg00011.html
 nmap    <ESC>[5^    <C-PageUp>
 nmap    <ESC>[6^    <C-PageDown>
-nnoremap <silent> <C-PageDown> :bnext<cr>
-nnoremap <silent> <C-PageUp> :bprevious<cr>
+nnoremap <silent> <C-PageDown> :bnext<CR>
+nnoremap <silent> <C-PageUp> :bprevious<CR>
