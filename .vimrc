@@ -28,9 +28,8 @@ Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'tsaleh/vim-matchit'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
-Bundle 'vim-scripts/svn-diff.vim'
 Bundle 'vim-scripts/toggle_maximize.vim'
-
+Bundle 'airblade/vim-gitgutter'
 Bundle 'sjl/gundo.vim.git'
 
 " vim-scripts repos
@@ -55,24 +54,6 @@ filetype plugin indent on     " required by Vundle
 " vim-powerline customizations
 let g:Powerline_symbols = 'fancy'
 set laststatus=2 " always show the status line
-
-" conf for svndiff
-let g:svndiff_autoupdate = 1
-
-" blue for new lines
-hi DiffAdd ctermfg=16 ctermbg=69 guibg='blue' 
-" yellow for modified lines
-hi DiffChange ctermfg=16 ctermbg=3 guibg='yellow'
-" pink/red for deleted lines
-hi DiffDelete   ctermfg=16 ctermbg=1 guibg='red'
-
-noremap <F3> :call Svndiff("prev")<CR> 
-noremap <F4> :call Svndiff("next")<CR>
-noremap <F5> :call Svndiff("clear")<CR>
-
-sign define svndiff_add    text=> texthl=diffAdd
-sign define svndiff_delete text=< texthl=diffDelete
-sign define svndiff_change text=x texthl=diffChange
 
 syntax enable
 set background=dark
@@ -143,8 +124,17 @@ set hidden
 
 " highlight current line
 set cursorline
-hi cursorline guibg=#333333 " highlight bg color of current line
-hi CursorColumn guibg=#333333 " highlight cursor
+hi CursorLine ctermbg=Black " highlight bg color of current line
+hi CursorColumn ctermbg=Yellow " highlight cursor
+
+" vim-gitgutter settings
+hi link GitGutterAdd DiffAdd
+hi link GitGutterChange DiffChange
+hi link GitGutterDelete DiffDelete
+hi link GitGutterChangeDelete DiffChangeDelete
+hi SignColumn ctermbg=None  " not a proper vim-gitgutter setting, but related
+let g:gitgutter_sign_column_always=1
+let g:gitgutter_highlight_lines=0
 
 " persistent undo
 set undofile               " Save undo's after file closes
