@@ -1,5 +1,3 @@
-set t_Co=256
-
 set nocompatible               " be iMproved
 
 " ### Vundle Configuration
@@ -51,21 +49,21 @@ filetype plugin indent on     " required by Vundle
 
 " ### END OF VUNDLE CONFIGURATION
 
+" main colors
+set t_Co = 256 " use 256 colors
+set background = dark
+colorscheme solarized
+syntax enable
+
 " vim-powerline customizations
 let g:Powerline_symbols = 'fancy'
-set laststatus=2 " always show the status line
-
-syntax enable
-set background=dark
-"let g:solarized_termcolors=16
-"set t_Co=16
-colorscheme solarized
+set laststatus = 2 " always show the status line
 
 "do not put an empty line at end of file when saving
 set noeol
 set binary
 
-
+" do not jump over wrapped lines
 nmap j gj
 nmap k gk
 
@@ -142,7 +140,7 @@ set undodir=~/.vim/undo    " where to save undo histories (dir must exist)
 set undolevels=1000        " How many undos
 set undoreload=10000       " number of lines to save for undo
 
-" gundu keyboard mappings
+" gundo keyboard mappings
 nnoremap <leader>u :GundoToggle<CR>
 
 " indentation settings
