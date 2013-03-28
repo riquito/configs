@@ -31,8 +31,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'sjl/gundo.vim.git'
 
 " vim-scripts repos
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
 Bundle 'vim-colors-solarized'
 
 filetype plugin indent on     " required by Vundle
