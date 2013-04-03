@@ -48,14 +48,14 @@ filetype plugin indent on     " required by Vundle
 " ### END OF VUNDLE CONFIGURATION
 
 " main colors
-set t_Co = 256 " use 256 colors
-set background = dark
+set t_Co=256 " use 256 colors
+set background=dark
 colorscheme solarized
 syntax enable
 
 " vim-powerline customizations
-let g:Powerline_symbols = 'fancy'
-set laststatus = 2 " always show the status line
+let g:Powerline_symbols='fancy'
+set laststatus=2 " always show the status line
 
 "do not put an empty line at end of file when saving
 set noeol
