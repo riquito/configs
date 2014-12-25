@@ -28,7 +28,9 @@ export GPG_AGENT_INFO
 export GNOME_KEYRING_PID
 export GNOME_KEYRING_CONTROL
 
-~/.xmonad/bin/tray &
+if [ -f ~/.xmonad/bin/tray ]; then
+    ~/.xmonad/bin/tray &
+fi
 
 xsetroot -solid "#002b36"
 
