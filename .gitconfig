@@ -1,0 +1,19 @@
+[user]
+    name = Riccardo Attilio Galli
+    email = riccardo@sideralis.org
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+[alias]
+    st = status
+    ff = pull --ff
+[core]
+    excludesfile = ~/.gitignore
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[push]
+	default = upstream
