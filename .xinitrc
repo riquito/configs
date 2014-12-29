@@ -10,9 +10,9 @@ fi
 # set enable-keypad on # doesn't seem to work
 echo $(tput smkx) >/dev/tty
 
-[[ -f ~/.Xresources ]]  && xrdb -merge ~/.Xresources
-[[ -f ~/.urxvt.conf ]]  && xrdb -merge ~/.urxvt.conf
-[[ -f ~/.urxvt-theme ]] && xrdb -merge ~/.urxvt-theme
+[ -f ~/.Xresources ]  && xrdb -merge ~/.Xresources
+[ -f ~/.urxvt.conf ]  && xrdb -merge ~/.urxvt.conf
+[ -f ~/.urxvt-theme ] && xrdb -merge ~/.urxvt-theme
 
 # Start GNOME Keyring
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
