@@ -1,0 +1,5 @@
+#!/bin/sh
+
+stalonetray --kludges=force_icons_size,fix_window_pos  --geometry 1x1-0+0  \
+    --skip-taskbar -i 16  --window-strut none --window-type utility --grow-gravity E \
+    --dockapp-mode simple -bg "#002b36"
