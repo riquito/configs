@@ -4,36 +4,40 @@ set nocompatible               " be iMproved
 
 filetype off                   " required by Vundle
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required by Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles
+" My Plugins
 " 
 " original repos on github
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'Valloric/YouCompleteMe'
-
-Bundle 'tsaleh/vim-matchit'
-Bundle 'techlivezheng/vim-plugin-minibufexpl'
-Bundle 'vim-scripts/toggle_maximize.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'sjl/gundo.vim.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'techlivezheng/vim-plugin-minibufexpl'
+"Plugin 'vim-scripts/toggle_maximize.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'sjl/gundo.vim.git'
 
 " vim-scripts repos
-Bundle 'vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
+" All of your Plugins must be added before the following line
+call vundle#end()             " required by Vundle
 filetype plugin indent on     " required by Vundle
+
+
+
 
 "
 " Brief help
