@@ -1,0 +1,19 @@
+! keyboard remap for the ideapad u330p
+
+! map rightmost vertical keys
+! to (from top to bottom) 
+! home - pageUp - pageDown - end
+
+keycode 110 = Home NoSymbol Home
+keycode 115 = Prior NoSymbol Prior
+keycode 112 = Next NoSymbol Next
+keycode 117 = End NoSymbol End
+
+! map print to insert 
+! (used to paste with shift+ctrl+insert)
+
+keycode 107 = Insert
+
+! some vim love, capslock to ESC
+keycode 66 = Escape NoSymbol Escape
+
