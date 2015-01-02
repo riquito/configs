@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=xmonad
+Comment=XMonad
+Exec=/home/riquito/.xmonad/bin/startxmonad
+Terminal=false
+
+[Window Manager]
+SessionManaged=true
+
+# vi: encoding=utf-8
