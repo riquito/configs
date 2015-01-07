@@ -15,6 +15,9 @@ echo $(tput smkx) >/dev/tty
 [ -f ~/.urxvt.conf ]  && xrdb -merge ~/.urxvt.conf
 [ -f ~/.urxvt-theme ] && xrdb -merge ~/.urxvt-theme
 
+# set keyboard layout to italian
+setxkbmap -layout it
+
 # load alternative keyboard configurations
 [ -s ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
