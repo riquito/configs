@@ -8,12 +8,32 @@
     ui = true
 [alias]
     st = status
-    ff = pull --ff
+    ff = pull --ff-only
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 [core]
     excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = vim
+    pager = less -FXRS -x2
 [diff]
     tool = meld
+    mnemonicprefix = true
 [difftool]
     prompt = false
 [push]
-	default = upstream
+    default = upstream
+[color "branch"]
+    # good looking colors i copy/pasted from somewhere
+    current = green bold
+    local = green
+    remote = red bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red
+
