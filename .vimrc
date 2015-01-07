@@ -28,6 +28,7 @@ Plugin 'techlivezheng/vim-plugin-minibufexpl'
 "Plugin 'vim-scripts/toggle_maximize.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sjl/gundo.vim.git'
+Plugin 'majutsushi/tagbar'
 
 " vim-scripts repos
 Plugin 'altercation/vim-colors-solarized'
@@ -159,9 +160,12 @@ set pastetoggle=<F12>  " pastetoggle (sane indentation on pastes)
 " set backspace=indent,eol,start
 
 " Switch buffers
-" note that I must first define what is <C-PageUp> for urxt
+" note that I must first define what is <C-PageUp> for urxvt
 " http://cygwin.com/ml/cygwin-xfree/2006-07/msg00011.html
 nmap    <ESC>[5^    <C-PageUp>
 nmap    <ESC>[6^    <C-PageDown>
 nnoremap <silent> <C-PageDown> :bnext<CR>
 nnoremap <silent> <C-PageUp> :bprevious<CR>
+
+" tagbar configuration
+nmap <F8> :TagbarToggle<CR>
