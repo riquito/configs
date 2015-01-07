@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# fedora uses urxct256c* instead of urxvt* for
+# 256 colors urxvt
+
+if command -v urxvt256cc > /dev/null 2>&1; then
+    urxvt256cc "$@"
+elif command -v urxvtc > /dev/null 2>&1; then 
+    urxvtc "$@"
+
+# no daemon running, run a non-daemon terminal
+elif command -v urxvt256c > /dev/null 2>&1; then 
+    urxvt256c "$@"
+elif command -v urxvt > /dev/null 2>&1; then 
+    urxvt "$@"
+else
+    exit 1
+fi
+

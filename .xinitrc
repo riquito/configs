@@ -41,8 +41,8 @@ fi
 
 xsetroot -solid "#002b36"
 
-# start rxvt daemon
-urxvt256cd &
+# start rxvt daemon if available
+~/.bin/urxvtd &
 
 gnome-screensaver&
 #gnome-settings-daemon
