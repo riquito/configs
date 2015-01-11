@@ -6,7 +6,8 @@ DIRNAME=$(dirname "$FILEPATH")
 FILENAME=$(basename "$FILEPATH")
 
 for i in $(find $DIRNAME -mindepth 1 -maxdepth 1 \
-	   -name .git -o \
+           -name LICENSE -o \
+           -name .git -o \
            -name $FILENAME \
            -prune -o \
            -print); do
