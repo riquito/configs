@@ -11,6 +11,7 @@ alias la='ls -la'
 alias ll='ls -l'
 alias ..='cd ..'
 alias vi='/usr/bin/vim'
+alias dmesg='dmesg -H -L=always'
 
 # prompt
 PS1='@\[\e[1;49;38;5;2m\]\h\[\e[0;49;39m\] \[\e[1;49;38;5;4m\]\w ∴ \[\e[0;49;39m\] \[\e[1;49;38;5;6m\]\$\[\e[0;49;39m\] \[\e[0m\]'
