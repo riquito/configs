@@ -11,6 +11,7 @@ alias la='ls -la'
 alias ll='ls -l'
 alias ..='cd ..'
 alias vi='/usr/bin/vim'
+alias yum='dnf'
 alias dmesg='dmesg -H -L=always'
 
 # prompt
