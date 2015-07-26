@@ -94,6 +94,9 @@ set listchars+=precedes:< " The character to show in the last column when wrap i
 " toggle NERDTree
 nmap <leader>e :NERDTreeToggle<CR>
 
+" exclude some directories from ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|tmp\|cache\|bower_components'
+
 " show at bottom right that <leader> key is active
 set showcmd
 
