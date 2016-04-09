@@ -2,4 +2,4 @@
 
 DIR=$( cd $( dirname -- "$0" ) > /dev/null ; pwd )
 
-$DIR/urxvtc -e tmux || xterm -e tmux
+$DIR/urxvtc || xterm
