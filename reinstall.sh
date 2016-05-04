@@ -5,7 +5,7 @@ FILEPATH=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)/$(basename 
 DIRNAME=$(dirname "$FILEPATH")
 FILENAME=$(basename "$FILEPATH")
 
-for i in $(find $DIRNAME -mindepth 1 -maxdepth 1 \
+for i in $(find $DIRNAME/src -mindepth 1 -maxdepth 1 \
            -name LICENSE -o \
            -name README.md -o \
            -name .git -o \
