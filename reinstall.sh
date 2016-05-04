@@ -5,25 +5,48 @@ FILEPATH=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)/$(basename 
 DIRNAME=$(dirname "$FILEPATH")
 FILENAME=$(basename "$FILEPATH")
 
+function backup()
+{
+    local path=$1
+
+    # if $path exists and is not a symlink
+    if [ -e $path ] && [ ! -h $path ]; then
+        echo "backup $path in $path.bak"
+        
+        rm -fr $path.bak
+        mv $path $path.bak
+    fi
+}
+
+function linkify()
+{
+    local src=$1
+    local dest=$2
+
+    echo ln -sfn $src $dest
+    ln -sfn $src $dest
+}
+
 for i in $(find $DIRNAME/src -mindepth 1 -maxdepth 1 \
-           -name LICENSE -o \
-           -name README.md -o \
-           -name .git -o \
-           -name $FILENAME \
-           -prune -o \
-           -print); do
-    
+        -name .config \
+        -prune -o \
+        -print); do
+
     dest="$HOME/$(basename "$i")"
 
-    if [ -e $dest ] && [ ! -h $dest ]; then
-        echo "backup $dest in $dest.bak"
-        rm -fr $dest.bak
-        mv $dest $dest.bak
-    fi
+    backup $dest
+    linkify $i $dest
+done
 
-    echo ln -sfn $i $dest
-    ln -sfn $i $dest
+if [[ ! -d "$HOME/.config" ]]; then
+    mkdir $HOME/.config
+fi
 
+for i in $(find $DIRNAME/src/.config -mindepth 1 -maxdepth 1 -print); do
+    dest="$HOME/.config/$(basename "$i")"
+
+    backup $dest
+    linkify $i $dest
 done
 
 echo "... done"
