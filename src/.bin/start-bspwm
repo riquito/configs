@@ -1,0 +1,16 @@
+# Set a nice environment variable so the user can
+# neatly detect that this is an xmonad session
+SESSION_TYPE=bspwm
+
+GLOBALXSESSION=/etc/xmonad/xsession
+USERXSESSION=~/.xsession
+
+if [ -f "$GLOBALXSESSION" ]
+  then . $GLOBALXSESSION
+fi
+
+if [ -f "$USERXSESSION" ]
+  then . $USERXSESSION
+fi
+
+exec /usr/local/bin/bspwm -c ~/.config/bspwm/bspwmrc
