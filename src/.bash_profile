@@ -19,7 +19,7 @@ PS1='@\[\e[1;49;38;5;2m\]\h\[\e[0;49;39m\] \[\e[1;49;38;5;4m\]\w ∴ \[\e[0;49;3
 
 # User specific environment and startup programs
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
-PATH=/opt/komodo-edit-8/bin:$PATH
+PATH=/opt/komodo/bin:$PATH
 PATH=$HOME/.xmonad/bin:$PATH
 PATH=/opt/nodejs/bin:$PATH
 export PATH
