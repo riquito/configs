@@ -392,5 +392,9 @@ defaults = defaultConfig {
     layoutHook         = smartBorders $ myLayout,
     manageHook         = myManageHook,
     startupHook        = myStartupHook,
-    handleEventHook    = fullscreenEventHook
+    --handleEventHook    = fullscreenEventHook
+    handleEventHook = mconcat [
+	    docksEventHook,
+	    fullscreenEventHook
+    ]
 }
