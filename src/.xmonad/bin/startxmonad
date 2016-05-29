@@ -13,4 +13,4 @@ if [ -f "$USERXSESSION" ]
   then . $USERXSESSION
 fi
 
-exec /usr/bin/xmonad-start
+exec /usr/bin/xmonad
