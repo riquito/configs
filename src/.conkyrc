@@ -10,7 +10,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
-    xftfont = 'DejaVu Sans Mono:size=12',
+    font = 'DejaVu Sans Mono:size=12',
     minimum_height = 5,
     minimum_width = 5,
     net_avg_samples = 2,
@@ -28,7 +28,7 @@ conky.config = {
 
     alignment = 'top_right',
     gap_x = 20,
-    gap_y = 60,
+    gap_y = 10,
     own_window = true,
     own_window_class = 'Conky',
     own_window_type = 'desktop',
