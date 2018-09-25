@@ -5,7 +5,8 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # aliases
-alias ls='ls --color=auto'
+alias ls='/usr/local/bin/exa'
+#alias ls='ls --color=auto'
 alias la='ls -a'
 alias la='ls -la'
 alias ll='ls -l'
