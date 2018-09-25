@@ -42,4 +42,12 @@ if [ -f /etc/bash_completion.d/git ]; then
     . /etc/bash_completion.d/git
 fi
 
+if [ -f ~/.fzf_key-bindings.bash ]; then
+    . ~/.fzf_key-bindings.bash
+fi
+
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules,cache,.mozilla,vendor}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 
