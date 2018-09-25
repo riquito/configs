@@ -37,3 +37,5 @@
     changed = yellow bold
     untracked = red
 
+[merge]
+	conflictstyle = diff3
