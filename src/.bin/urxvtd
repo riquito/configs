@@ -2,6 +2,8 @@
 
 if command -v urxvt256cd > /dev/null 2>&1; then
     urxvt256cd "$@"
+elif command -v urxvt256c-mld > /dev/null 2>&1; then
+    urxvt256c-mld "$@"
 elif command -v urxvtd > /dev/null 2>&1; then 
     urxvtd "$@"
 else
