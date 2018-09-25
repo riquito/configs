@@ -1,8 +1,8 @@
 Config {
-    font = "xft:Dejavu Sans Mono:pixelsize=12:antialias=true:style=bold",
+    font = "xft:Dejavu Sans Mono:size=10:antialias=true:style=bold",
     bgColor = "#002b36",
     fgColor = "#ffffff",
-    position = Static { xpos = 0, ypos = 0, width = 1245, height = 16 },
+    position = Static { xpos = 0, ypos = 0, width = 1600, height = 16 },
     lowerOnStart = True,
     commands = [
         Run MultiCpu ["-t","Cpu: <total>%","-L","30","-H","60","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-w","2"] 10,
@@ -14,13 +14,13 @@ Config {
         Run DynNetwork ["-t","Net: <dev> <rx>KB|<tx>KB","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run Date "%a %b %_d %H:%M" "date" 600,
         Run StdinReader,
-        Run BatteryP ["BAT1"]
+        Run BatteryP ["AC", "BAT0", "BAT1"]
               ["-t", "AC <acstatus> <left>%",
                "-L", "35", "-H", "80", "-h", "lightblue", "-l", "red", "-n", "green",
-               "--", "-O", "<fc=green>On</fc> - ", "-o", "off", "-i", "idle",
+               "--", "-O", "<fc=green>On </fc> /", "-o", "<fc=red>Off</fc> /", "-i", "idle",
                "-L", "-15", "-H", "-5",
                "-l", "red", "-m", "blue", "-h", "green"]
-              600
+              30
     ],
     sepChar = "%",
     alignSep = "}{",
